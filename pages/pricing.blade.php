@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    	<title>Get yourself and business organized in one place</title>
+        <meta name="description" content="Get yourself and your business organised. Build and manage your audien.">
+        <meta name="keywords" content="Email, Newsletter, Operations, Marketing,Grow your customer, SEO, Campaign, Schedule, Contact list, traffic">
+        <meta name="author" content="Temidayo Oyewo">
+        <meta data-n-head="1" name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@TalebeeHQ">
+        <!--<meta name="twitter:app:country" content="NG">-->
+        <meta property="og:url" content="https://Talebee.com">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Talebee">
+        <meta data-n-head="1" name="og:title" content="Talebee">
+        <meta data-n-head="1" name="og:description" content="Get yourself and your business organised.">
+        <meta property="og:image" content="{{ asset('assets/img/apple-icon-180x180.png') }}" />
+        <meta data-n-head="1" name="og:image" content="{{ asset('assets/img/apple-icon-180x180.png') }}">
+        <meta property="og:description" content="Send custom emails, manage your newsletters and convert your contacts into happy customers. Make it happen!" />
+        <link rel="shortcut icon" href="{{ asset('assets/img/favicon.png') }}" type="image/x-icon">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{asset('img/favicon.png')}}">
+        <link rel="icon" type="image/png" sizes="192x192"  href="{{ asset('assets/img/android-chrome-192x192.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/img/android-chrome-512x512.png') }}">
+        <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('assets/img/apple-touch-icon.png') }}">
+        <link rel="manifest" href="{{ asset('assets/img/site.webmanifest') }}">
+        <meta name="msapplication-TileColor" content="#ffffff">
+       
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7COswald:300,400,500,700%7CRoboto:400,500%7CExo+2:600&display=swap" rel="stylesheet">
+
+        <!-- Perfect Scrollbar -->
+        <link type="text/css" href="{{asset('assets/assets-new/vendor/perfect-scrollbar.css')}}" rel="stylesheet">
+
+        <!-- Material Design Icons -->
+        <link type="text/css" href="{{asset('assets/assets-new/css/material-icons.css')}}" rel="stylesheet">
+
+        <!-- Font Awesome Icons -->
+        <link type="text/css" href="{{asset('assets/assets-new/css/fontawesome.css')}}" rel="stylesheet">
+
+        <!-- Preloader -->
+        <link type="text/css" href="{{asset('assets/assets-new/vendor/spinkit.css')}}" rel="stylesheet">
+        <link type="text/css" href="{{asset('assets/assets-new/css/preloader.css')}}" rel="stylesheet">
+
+        <!-- App CSS -->
+        <link type="text/css" href="{{asset('assets/assets-new/css/app.css')}}" rel="stylesheet">
+
+        <!-- Dark Mode CSS (optional) -->
+        <link type="text/css" href="{{asset('assets/assets-new/css/dark-mode.css')}}" rel="stylesheet">
+       @csrf
+       <style>
+            .reveal{
+            position: relative;
+            transform:translateY(150px);
+            opacity: 0;
+            transition: all 0.5s ease-in-out;
+
+            }
+            .activate{
+                position: relative;
+                transform: translateY(0);
+                opacity: 1;
+                transition: all 1s ease-in-out;
+
+            }
+            .content {
+                background-color: rgba(255, 255, 255, 0.9);
+                top: 0;
+                left: 11px;
+                max-width: 300px;
+                padding: 50px;
+                position: absolute;
+                z-index: 2;
+            }
+
+            .content h2 {
+                font-size: 2.5em;
+            }
+
+            .content p {
+                font-size: 1.2em;
+                margin: 10px 0 0;
+                padding-bottom: 20px;
+            }
+       </style>
+    </head>
+
+    <body class="layout-sticky-subnav layout-default ">
+
+        <div class="preloader">
+            <div class="sk-bounce">
+                <div class="sk-bounce-dot"></div>
+                <div class="sk-bounce-dot"></div>
+            </div>
+        </div>
+
+        <!-- Header Layout -->
+        <div class="mdk-header-layout js-mdk-header-layout">
+            <!-- Header -->
+            <div id="header" class="mdk-header js-mdk-header mb-0" data-fixed>
+                <div class="mdk-header__content">
+                    @include('landing.nav')
+                </div>
+            </div>
+
+            <!-- // END Header -->
+
+            <!-- Header Layout Content -->
+            <div class="mdk-header-layout__content page-content">
+                <div class=" pt-32pt pt-sm-64pt pb-32pt">
+                    <div class="container page__container page-section">
+                        <div class="">
+                            <div class="page-section border-bottom-2 mt-n5">
+                                <div class="container-fluid page__container">
+                               
+                                    <div class="row justify-content-center mb-2">
+                                        <div class="col-auto">
+                                            <nav class="nav btn-group">
+                                                <div class="col-auto">
+                                                    <a href="#monthly" data-toggle="tab" role="tab" aria-selected="true" class="dashboard-area-tabs__tab card-body d-flex flex-row align-items-center justify-content-start active">
+                                                        Monthly billing
+                                                    </a>
+                                                </div>
+                                                
+                                                <div class="col-auto border-left border-right">
+                                                    <a href="#annual" data-toggle="tab" role="tab" aria-selected="false" class="dashboard-area-tabs__tab card-body d-flex flex-row align-items-center justify-content-start">
+                                                        Annual billing
+                                                    </a>
+                                                </div>
+                                            </nav>
+                                        </div>
+        
+                                    </div>
+                                    
+                                    @include('errors.error_message')
+                                    <div class="tab-content">
+                                        <div class="tab-pane active text-70" id="monthly">
+                                            <div class="row card-group-row mb-16pt mb-lg-40pt">
+                                                @forelse ($subscriptions as $subscription)
+                                                <div class="col-lg-4 col-sm-6 card-group-row__col">
+                                                    <div class="card card-group-row__card text-center o-hidden {{$subscription->slug=="premium"?'card--raised':'' }} ">
+                                                        @if ($subscription->slug=="premium")
+                                                        <span class="corner-ribbon corner-ribbon--default-right-top corner-ribbon--shadow bg-accent text-white">Start</span>  
+                                                                                
+                                                        @endif
+                                                        <div class="card-body d-flex flex-column">
+                                                            <div class="flex-grow mb-16pt">
+                                                                <span class="w-64 h-64 icon-holder icon-holder--outline-accent rounded-circle d-inline-flex mb-16pt">
+                                                                    <i class="material-icons">
+                                                                        @switch($subscription->slug)
+                                                                            @case('professional')
+                                                                                group
+                                                                                @break
+                                                                            @case('premium')
+                                                                                business_center
+                                                                                @break
+                                                                            @case('business')
+                                                                                business
+                                                                                @break
+                                                                        
+                                                                            @default
+                                                                                person
+                                                                        @endswitch
+                                                                    </i>
+                                                                </span>
+                                                                <h4 class="mb-8pt">{{$subscription->name }}</h4>
+                                                                <p class="text-70 text-left mb-0">
+                                                                    <ul class="list-unstyled">
+                                                                        @foreach ($subscription->description as $description )
+                                                                        <li class="">{!! $description !!}</li>
+                                                                        @endforeach
+                                                                    </ul>
+                                                                </p>
+                                                            </div>
+                                                            <p class="d-flex justify-content-center align-items-center m-0">
+                                                                <span class="h4 m-0 font-weight-normal">&dollar;</span>
+                                                                <span class="h1 m-0 font-weight-normal">{{ json_decode($subscription->price)->monthly }}</span>
+                                                                <span class="h4 m-0 font-weight-normal">/ month</span>
+                                                            </p>
+                                                            <p class="lh-1 text-muted mb-0"><small></small></p>
+                                                        </div>
+                                                        <div class="card-footer">
+                                                            <a href="{{ route('login') }}" id="subscribe-to-monthly" class="btn subscribe-to-monthly {{$subscription->slug=="premium"?'btn-accent':'btn-outline-secondary' }}" data-meta='{"period":"monthly","subscription":"{{$subscription->slug}}","plan":{{$subscription->id}},"price":{{json_decode($subscription->price)->monthly}}}'>Get started</a>
+                                                        </div>
+                                                    </div>
+        
+                                                </div>
+                                                @empty
+        
+                                                @endforelse
+                                            
+                                            </div>
+                                        </div>
+        
+                                        <div class="tab-pane text-70" id="annual">
+                                            <div class="row card-group-row mb-16pt mb-lg-40pt">
+                                                @forelse ($subscriptions as $subscription)
+                                                <div class="col-lg-4 col-sm-6 card-group-row__col">
+                                                    <div class="card card-group-row__card text-center o-hidden {{$subscription->slug=="premium"?'card--raised':'' }} ">
+                                                        @if ($subscription->slug=="premium")
+                                                            <span class="corner-ribbon corner-ribbon--default-right-top corner-ribbon--shadow bg-accent text-white">Start</span>                                                                          
+                                                        @endif
+                                                        <div class="card-body d-flex flex-column">
+                                                            <div class="flex-grow mb-16pt">
+                                                                <span class="w-64 h-64 icon-holder icon-holder--outline-accent rounded-circle d-inline-flex mb-16pt">
+                                                                    <i class="material-icons">
+                                                                        @switch($subscription->slug)
+                                                                            @case('professional')
+                                                                                group
+                                                                                @break
+                                                                            @case('premium')
+                                                                                business_center
+                                                                                @break
+                                                                            @case('business')
+                                                                                business
+                                                                                @break
+                                                                        
+                                                                            @default
+                                                                                person
+                                                                        @endswitch
+                                                                    </i>
+                                                                </span>
+                                                                <h4 class="mb-8pt">{{$subscription->name }}</h4>
+                                                                <p class="text-70 text-left mb-0">
+                                                                    <ul class="list-unstyled">
+                                                                        @foreach ($subscription->description as $description )
+                                                                        <li class="">{!! $description !!}</li>
+                                                                        @endforeach
+                                                                    </ul>
+                                                                </p>
+                                                            </div>
+                                                            <p class="d-flex justify-content-center align-items-center m-0">
+                                                                <span class="h4 m-0 font-weight-normal">&dollar;</span>
+                                                                <span class="h1 m-0 font-weight-normal">{{ json_decode($subscription->price)->yearly }}</span>
+                                                                <span class="h4 m-0 font-weight-normal">/ year</span>
+                                                            </p>
+                                                            <p class="lh-1 text-muted mb-0"><small>You saved 15%</small></p>
+                                                        </div>
+                                                        <div class="card-footer">
+                                                            <a href="{{ route('login') }}" id="subscribe-to-monthly" class="btn subscribe-to-monthly {{$subscription->slug=="premium"?'btn-accent':'btn-outline-secondary' }}" data-meta='{"period":"yearly","subscription":"{{$subscription->slug}}","plan":{{$subscription->id}},"price":{{json_decode($subscription->price)->yearly}}}'>Get started</a>
+                                                        </div>
+                                                    </div>
+        
+                                                </div>
+                                                @empty
+        
+                                                @endforelse
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="page-headline page-headline--title text-center">
+                                        <h2>All plans include</h2>
+                                    </div>
+                                
+                                    <div class="col-lg-8 mx-auto">
+                                        <div class="row">
+                                            <div class="col-sm-6 mb-24pt mb-sm-0">
+                                                <ul class="list-unstyled">
+                                                    <li class="d-flex align-items-center mb-8pt">
+                                                        <span class="material-icons mr-8pt">check</span>
+                                                        <span>24h Access to support</span>
+                                                    </li>
+                                                    <li class="d-flex align-items-center mb-8pt">
+                                                        <span class="material-icons mr-8pt">check</span>
+                                                        <span>Story automation and scheduling</span>
+                                                    </li>
+                                                    <li class="d-flex align-items-center mb-8pt">
+                                                        <span class="material-icons mr-8pt">check</span>
+                                                        <span>Email tracking and analytics</span>
+                                                    </li>
+                                                    <li class="d-flex align-items-center mb-8pt">
+                                                        <span class="material-icons mr-8pt">check</span>
+                                                        <span>Send time optimization</span>
+                                                    </li>
+                                                    <li class="d-flex align-items-center">
+                                                        <span class="material-icons mr-8pt">check</span>
+                                                        <span>Activities tracking</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <ul class="list-unstyled">
+                                                    <li class="d-flex align-items-center mb-8pt">
+                                                        <span class="material-icons mr-8pt">check</span>
+                                                        <span>Phone support</span>
+                                                    </li>
+                                                    <li class="d-flex align-items-center mb-8pt">
+                                                        <span class="material-icons mr-8pt">check</span>
+                                                        <span>Join 2000+ Community Members</span>
+                                                    </li>
+                                                    <li class="d-flex align-items-center mb-8pt">
+                                                        <span class="material-icons mr-8pt">check</span>
+                                                        <span>99.99% guarantee uptime</span>
+                                                    </li>
+                                                    <li class="d-flex align-items-center mb-8pt">
+                                                        <span class="material-icons mr-8pt">check</span>
+                                                        <span>Newsletter subscription pages</span>
+                                                    </li>
+                                                    <li class="d-flex align-items-center">
+                                                        <span class="material-icons mr-8pt">check</span>
+                                                        <span>Duplicate checker</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                </div>
+                            </div>
+        
+                          
+                            <div class="page-section border-bottom-2" id="faqs">
+                                <div class="container-fluid page__container">
+                                    <div class="page-headline text-center">
+                                        <h2>Feedback</h2>
+                                        <p class="lead measure-lead mx-auto text-70">What other solopreneurs, business owners and individuals have to say about us after using our platform in reaching their goals.</p>
+                                    </div>
+        
+                                    <div class="position-relative carousel-card">
+                                        <div class="row d-block js-mdk-carousel"
+                                            id="carousel-feedback">
+                                            <a class="carousel-control-next js-mdk-carousel-control mt-n24pt"
+                                            href="#carousel-feedback"
+                                            role="button"
+                                            data-slide="next">
+                                                <span class="carousel-control-icon material-icons"
+                                                    aria-hidden="true">keyboard_arrow_right</span>
+                                                <span class="sr-only">Next</span>
+                                            </a>
+                                            <div class="mdk-carousel__content">
+        
+                                                <div class="col-12 col-md-6">
+                                                    <div class="card card--elevated card-body">
+                                                        <blockquote class="mb-0">
+                                                            <p class="text-70">
+                                                                    I was a little nervous about Talebee products in general but I was so impressed with how easy it was to get started with. I had no idea what I was doing, and it took me less than 15 minutes to set up my account and get started. After that, it's been a smoth sailing ever since 
+                                                                ?</p>
+        
+                                                            <div class="media">
+                                                                <div class="media-left">
+                                                                    <img src="{{asset('assets/assets-new/images/256_jeremy-banks-798787-unsplash.jpg')}}"
+                                                                        width="40"
+                                                                        alt="avatar"
+                                                                        class="rounded-circle">
+                                                                </div>
+                                                                <div class="media-body media-middle">
+                                                                    <p class="mb-0"><a href=""
+                                                                        class="text-body"><strong>Umberto Kass</strong></a></p>
+                                                                    <div class="rating">
+                                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                                        <span class="rating__item"><span class="material-icons">star_border</span></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </blockquote>
+                                                    </div>
+                                                </div>
+        
+                                                <div class="col-12 col-md-6">
+                                                    <div class="card card--elevated card-body">
+                                                        <blockquote class="mb-0">
+                                                            <p class="text-70">
+                                                                    We've been using Talebee for couple of weeks now and we love it! Been able to manage our data has helped us and save us time, simplify processes, and ultimately become more productive. We couldn't be happier with the choice we made to use Talebee.
+                                                               </p>
+                                                                
+                                                            <div class="media">
+                                                                <div class="media-left">
+                                                                    <img src="{{asset('assets/assets-new/images/256_michael-dam-258165-unsplash.jpg')}}"
+                                                                        width="40"
+                                                                        alt="avatar"
+                                                                        class="rounded-circle">
+                                                                </div>
+                                                                <div class="media-body media-middle">
+                                                                    <p class="mb-0"><a href=""
+                                                                        class="text-body"><strong>Umberto Kass</strong></a></p>
+                                                                    <div class="rating">
+                                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                                        <span class="rating__item"><span class="material-icons">star_border</span></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </blockquote>
+                                                    </div>
+                                                </div>
+        
+                                                <div class="col-12 col-md-6">
+                                                    <div class="card card--elevated card-body">
+                                                        <blockquote class="mb-0">
+                                                            <p class="text-70">Not only has it helped us to increase profits, it has enabled us to automate many of our business processes. Its easy to use and works flawlessly in migrating our contact lists.
+                                                               </p>
+                                                            <br>
+                                                            <div class="media">
+                                                                <div class="media-left">
+                                                                    <img src="{{asset('assets/assets-new/images/256_jeremy-banks-798787-unsplash.jpg')}}"
+                                                                        width="40"
+                                                                        alt="avatar"
+                                                                        class="rounded-circle">
+                                                                </div>
+                                                                <div class="media-body media-middle">
+                                                                    <p class="mb-0"><a href=""
+                                                                        class="text-body"><strong>Umberto Kass</strong></a></p>
+                                                                    <div class="rating">
+                                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                                        <span class="rating__item"><span class="material-icons">star_border</span></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </blockquote>
+                                                    </div>
+                                                </div>
+        
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="border-top-1 page-section">
+                                <div class="container-fluid page__container">
+                                    <div class="page-headline text-center">
+                                        <h2>FAQ</h2>
+                                        <p class="lead measure-lead mx-auto text-70">Frequently Asked Questions</p>
+                                    </div>
+                                    <div class="row card-group-row">
+                                        <div class="col-md-6 card-group-row__col">
+        
+                                            <div class="card card--elevated card-group-row__card">
+                                                <div class="card-body d-flex">
+                                                    <span class="icon-holder icon-holder--outline-muted rounded-circle d-inline-flex mr-16pt">
+                                                        <i class="material-icons">question_answer</i>
+                                                    </span>
+                                                    <div class="flex">
+                                                        <a class="card-title mb-4pt"
+                                                        href="">Do you offer a free trial?</a>
+                                                        <p class="text-70 mb-0">We offer everyone a forever but with a limited functions! You can take advantage of it by visiting our <a href="{{ route('register') }}"> sign-up</a> page! </p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer d-flex lh-1 px-16pt py-8pt">
+                                                    <div class="flex text-muted"><small>7 people found this useful</small></div>
+                                                    <a href="#"
+                                                    class="text-20"><i class="material-icons icon-16pt">thumb_up</i></a>
+                                                </div>
+                                            </div>
+        
+                                        </div>
+                                        <div class="col-md-6 card-group-row__col">
+        
+                                            <div class="card card--elevated card-group-row__card">
+                                                <div class="card-body d-flex">
+                                                    <span class="icon-holder icon-holder--outline-muted rounded-circle d-inline-flex mr-16pt">
+                                                        <i class="material-icons">question_answer</i>
+                                                    </span>
+                                                    <div class="flex">
+                                                        <a class="card-title mb-4pt"
+                                                        href="">Can I run two personal account on free mode?</a>
+                                                        <p class="text-70 mb-0">No, you have to subscribe to any of the premium subscription to add more profiles.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer d-flex lh-1 px-16pt py-8pt">
+                                                    <div class="flex text-muted"><small>7 people found this useful</small></div>
+                                                    <a href="#"
+                                                    class="text-20"><i class="material-icons icon-16pt">thumb_up</i></a>
+                                                </div>
+                                            </div>
+        
+                                        </div>
+                                        <div class="col-md-6 card-group-row__col">
+        
+                                            <div class="card card--elevated card-group-row__card">
+                                                <div class="card-body d-flex">
+                                                    <span class="icon-holder icon-holder--outline-muted rounded-circle d-inline-flex mr-16pt">
+                                                        <i class="material-icons">question_answer</i>
+                                                    </span>
+                                                    <div class="flex">
+                                                        <a class="card-title mb-4pt"
+                                                        href="">Can I switch back to my free mode from my premium subscription?</a>
+                                                        <p class="text-70 mb-0">Yes, you automatically switch back to free mode each time your subscription expire in which you are restricted to access premium functionalities.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer d-flex lh-1 px-16pt py-8pt">
+                                                    <div class="flex text-muted"><small>7 people found this useful</small></div>
+                                                    <a href="#"
+                                                    class="text-20"><i class="material-icons icon-16pt">thumb_up</i></a>
+                                                </div>
+                                            </div>
+        
+                                        </div>
+                                        <div class="col-md-6 card-group-row__col">
+        
+                                            <div class="card card--elevated card-group-row__card">
+                                                <div class="card-body d-flex">
+                                                    <span class="icon-holder icon-holder--outline-muted rounded-circle d-inline-flex mr-16pt">
+                                                        <i class="material-icons">question_answer</i>
+                                                    </span>
+                                                    <div class="flex">
+                                                        <a class="card-title mb-4pt"
+                                                        href="">I found a bug. Where can I report that?</a>
+                                                        <p class="text-70 mb-0">In the unlikely situation you stumble across a bug, go ahead and shoot us an email or drop a message for us in our DM on <a href="https://twitter.com/talebeeHQ"> twitter @talebeeHQ</a>.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer d-flex lh-1 px-16pt py-8pt">
+                                                    <div class="flex text-muted"><small>7 people found this useful</small></div>
+                                                    <a href="#"
+                                                    class="text-20"><i class="material-icons icon-16pt">thumb_up</i></a>
+                                                </div>
+                                            </div>
+        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container mb-5"> 
+                <span class="mr-5"> &copy; {{now()->format('Y')}}. Talebee.</span>
+                <a href="https://twitter.com/talebeehq" class="mr-2">Twitter</a>
+                <a href="https://instagram.com/talebeehq" class="mr-2">Instagram</a>
+                {{-- <a href="https://facebook.com/talebeehq" class="mr-2">Facebook</a>
+                <a href="https://linkedin.com/in/talebeehq" class="mr-2">LinkedIn</a> --}}
+            </div>            
+       
+        </div>
+    
+
+        <script src="{{asset('assets/assets-new/vendor/jquery.min.js')}}"></script>
+
+        <!-- Bootstrap -->
+        <script src="{{asset('assets/assets-new/vendor/popper.min.js')}}"></script>
+        <script src="{{asset('assets/assets-new/vendor/bootstrap.min.js')}}"></script>
+
+   
+        <!-- DOM Factory -->
+        <script src="{{asset('assets/assets-new/vendor/dom-factory.js')}}"></script>
+
+        <!-- MDK -->
+        <script src="{{asset('assets/assets-new/vendor/material-design-kit.js')}}"></script>
+
+        <!-- App JS -->
+        <script src="{{asset('assets/assets-new/js/app.js')}}"></script>
+
+        <!-- Highlight.js -->
+        <script src="{{asset('assets/assets-new/js/hljs.js')}}"></script>
+
+        <!-- App Settings (safe to remove) -->
+        <script src="{{asset('assets/assets-new/js/app-settings.js')}}"></script>
+        <script src="{{asset('assets/talejs/business.js')}}"></script>
+    </body>
+
+</html>

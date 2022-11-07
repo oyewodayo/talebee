@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    	<title>Get yourself and business organized in one place</title>
+        <meta name="description" content="Get yourself and your business organised. Build and manage your audien.">
+        <meta name="keywords" content="Email, Newsletter, Operations, Marketing,Grow your customer, SEO, Campaign, Schedule, Contact list, traffic">
+        <meta name="author" content="Temidayo Oyewo">
+        <meta data-n-head="1" name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@TalebeeHQ">
+        
+        <meta name="twitter:label1" content="Talebee" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@talebeeHQ" />
+        <meta name="twitter:domain" content="talebee.com" />
+        <meta name="twitter:title" content="Build and manage your audience with confidence." />
+        <meta name="twitter:image" content="/img/android-chrome-192x192.png" />
+        <meta name="twitter:image:src" content="/img/android-chrome-192x192.png" />
+        <meta name="twitter:image:alt" content="Talebee" />
+        <meta name="twitter:description" content="Get yourself and your business organised in one place. Build and manage your audien with confidence." />
+        <meta property="og:url" content="https://talebee.com">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Talebee">
+        <meta data-n-head="1" name="og:title" content="Talebee">
+        <meta data-n-head="1" name="og:description" content="Get yourself and your business organised in one place.">
+        <meta property="og:image" content="../landing/img/android-chrome-192x192.png" />
+        <meta data-n-head="1" name="og:image" content="../landing/img/android-chrome-192x192.png">
+        <meta property="og:description" content="Get yourself and your business organised in one place. Build and manage your audien with confidence." />
+        <link rel="shortcut icon" href="../landing/img/favicon.png" type="image/x-icon">
+        <link rel="icon" type="image/png" sizes="32x32" href="../landing/img/favicon.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="../landing/img/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../landing/img/android-chrome-512x512.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../landing/img/apple-touch-icon.png">
+        <link rel="manifest" href="../landing/img/site.webmanifest">
+        <meta name="msapplication-TileColor" content="#ffffff">
+       
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7COswald:300,400,500,700%7CRoboto:400,500%7CExo+2:600&display=swap" rel="stylesheet">
+
+        <!-- Perfect Scrollbar -->
+        <link type="text/css" href="../landing/vendor/perfect-scrollbar.css" rel="stylesheet">
+
+        <!-- Material Design Icons -->
+        <link type="text/css" href="../landing/css/material-icons.css" rel="stylesheet">
+
+        <!-- Font Awesome Icons -->
+        <link type="text/css" href="../landing/css/fontawesome.css" rel="stylesheet">
+
+        <!-- Preloader -->
+        <link type="text/css" href="../landing/vendor/spinkit.css" rel="stylesheet">
+        <link type="text/css" href="../landing/css/preloader.css" rel="stylesheet">
+
+        <!-- App CSS -->
+        <link type="text/css" href="../landing/css/app.css" rel="stylesheet">
+
+        <!-- Dark Mode CSS (optional) -->
+        <link type="text/css" href="../landing/css/dark-mode.css" rel="stylesheet">
+       @csrf
+       <style>
+            .reveal{
+            position: relative;
+            transform:translateY(150px);
+            opacity: 0;
+            transition: all 0.5s ease-in-out;
+
+            }
+            .zoom:hover {
+             transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+             transition: all 0.5s ease-in-out;
+            }
+            .reveal:hover {
+             transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+             transition: all 0.5s ease-in-out;
+            }
+            .activate{
+                position: relative;
+                transform: translateY(0);
+                opacity: 1;
+                transition: all 1s ease-in-out;
+
+            }
+            .content {
+                background-color: rgba(255, 255, 255, 0.9);
+                top: 0;
+                left: 11px;
+                max-width: 300px;
+                padding: 50px;
+                position: absolute;
+                z-index: 2;
+            }
+
+            .content h2 {
+                font-size: 2.5em;
+            }
+
+            .content p {
+                font-size: 1.2em;
+                margin: 10px 0 0;
+                padding-bottom: 20px;
+            }
+       </style>
+    </head>
+
+    <body class="layout-sticky-subnav layout-default ">
+
+        <div class="preloader">
+            <div class="sk-bounce">
+                <div class="sk-bounce-dot"></div>
+                <div class="sk-bounce-dot"></div>
+            </div>
+        </div>
+
+        <!-- Header Layout -->
+        <div class="mdk-header-layout js-mdk-header-layout">
+            <!-- Header -->
+            <div id="header" class="mdk-header js-mdk-header" data-fixed>
+                <div class="mdk-header__content">  
+                    <div class="navbar navbar-expand px-0  navbar-light navbar-shadow bg-white" id="default-navbar" data-primary>
+                        <!-- Navbar toggler -->
+
+                        <span class="ml-5"> </span> 
+
+                        <a href="../landing/index.html" class="navbar-brand">
+                            <img class="navbar-brand-icon" src = "../landing/img/talebee.png"  width="42" height="45" alt="Talebee">
+                        </a>
+                        <a href="../landing/index.html" class="navbar-brand mr-16pt">
+                            <span class="d-none d-lg-block">Talebee</span>
+                        </a>
+                        <div class="flex"></div>
+       
+                        <div class="mr-3">
+                         <a href="../landing/login.html" class="btn btn-primary ml-1"> Get Started-Free </a>
+                        </div>
+                   
+            
+                    </div>
+            
+                </div>
+                
+            </div>
+            
+
+            <!-- // END Header -->
+
+            <!-- Header Layout Content -->
+            <div class="mdk-header-layout__content page-content">
+                <div class=" pt-32pt pt-sm-64pt pb-32pt">
+                    <div class="container page__container page-section" style="margin-top:30px">
+                        <div class="row mb-5 ">
+                            <div class="col-md-12">
+                                <h1 class="text-center">Fast, <span style="color: #8b0000;">Powerful</span> and Reliable  </h1>
+                                <div class="text-center h6  mt-n3 ">Get yourself and your <br> business organised in one place.</div>
+                            </div>
+                            <div class="col-md-10 mx-auto mb-5 mt-4">
+                                <div class="col-md-6 mx-auto ">    
+                                    <form action="../landing/login.html">   
+                                    <div class="d-flex text-center">
+                                        <input id="email" class="form-control" value=" " placeholder="Your email address ...">
+                                        <button  type="submit" class="btn btn-primary" onclick="this.form.submit(); this.readonly=true;this.innerHTML=`<span class='spinner-grow spinner-grow-sm text-white'> </span>&nbsp; ...`;" style="width:120px;height:38px; margin-left: -110px;z-index:1000;border-radius:none"> Get started </button>
+                                    </div>
+                                </form> 
+                                </div>
+                                <div id="feedback" class="mt-2"></div>
+                            </div>
+                        
+                        
+                            <div class="col-md-12 mx-auto mb-5 zoom">
+                                <div class="col-md-6 col-sm-6  content alert alert-dismissible">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h2>
+                                        Audience
+                                    </h2>
+                                    
+                                    <p>
+                                        Build your audience with confidence. <br>
+                                        Manage all your list in one place. Edit existing and add new contact.
+                                    </p>
+                                </div>
+                                <img src="../landing/img/list1.png" alt="" style="width: 100%">
+                            </div>
+                            <div class="col-md-12 mx-auto mb-5 zoom">
+                                <div class="col-md-6 col-sm-6 content alert alert-dismissible">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h2>
+                                        Import List
+                                    </h2>
+                                    
+                                    <p>
+                                        Import excel record of your audience contact list. Excel files(.xlsx,.xls,.csv,.ods)
+                                    </p>
+                                </div>
+                                <img src="../landing/img/import1.png" alt="" style="width: 100%">
+                            </div>
+                         
+                            <div class="col-md-12 mx-auto mb-5 zoom">
+                                <div class="col-md-6 col-sm-6  content alert alert-dismissible">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h2>
+                                        Monitor
+                                    </h2>
+                                    
+                                    <p>
+                                        Monitor your subscriptions in realtime,track impressions and setup your newsletter page.
+                                    </p>
+                                </div>
+                                <img src="../landing/img/newsletter1.png" alt="" style="width: 100%">
+                            </div>
+                         
+                            <div class="col-md-12 mx-auto mb-5 zoom">
+                                <div class="col-md-6 col-sm-6  content alert alert-dismissible">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h2>
+                                        Story
+                                    </h2>
+                                    
+                                    <p>
+                                        Curate your story nicely. Search for relevant images for your story. Engage your audience and customers with interesting stories.
+                                    </p>
+                                </div>
+                                <img src="../landing/img/story1.png" alt="" style="width: 100%">
+                            </div>
+                        
+                            <div class="col-md-12 mx-auto mb-5 zoom">
+                                <div class="col-md-6 col-sm-6  content alert alert-dismissible">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h2>
+                                        Timeline
+                                    </h2>
+                                    
+                                    <p>
+                                    Your stories are organized not to loose track of draft and schedules.
+                                    </p>
+                                </div>
+                                <img src="../landing/img/timeline1.png" alt="" style="width: 100%">
+                            </div>
+                        
+                            <div class="col-md-12 mt-5">
+                                <h2>A platform you can depend on.</h2>
+                            </div>
+                            <div class="col-lg-3 col-sm-6 card-group-row__col" >
+                                <div class="card card-group-row__card text-center o-hidden card--raised" style="border-radius: 20px">
+                                   
+                                    <div class="card-footer">
+                                        <a href="#" id="subscribe-to-monthly" class="btn subscribe-to-monthly "> For Creators</a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                           
+                            <div class="col-lg-3 col-sm-6 card-group-row__col" >
+                                <div class="card card-group-row__card text-center o-hidden card--raised" style="border-radius: 20px">
+                                  
+                                    <div class="card-footer">
+                                        <a href="#" id="subscribe-to-monthly" class="btn subscribe-to-monthly "> For Publishers </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="col-lg-3 col-sm-6 card-group-row__col" >
+                                <div class="card card-group-row__card text-center o-hidden card--raised">
+                               
+                                    <div class="card-footer">
+                                        <a href="#" id="subscribe-to-monthly" class="btn subscribe-to-monthly ">For Business</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-sm-6 card-group-row__col" >
+                                <div class="card card-group-row__card text-center o-hidden card--raised">
+                               
+                                    <div class="card-footer">
+                                        <a href="#" id="subscribe-to-monthly" class="btn subscribe-to-monthly ">For You</a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        
+                            <div class="col-md-12 mx-auto mb-5">
+                                <div class="page-section border-bottom-1">
+                                    <div class="container-fluid page__container">
+                                        <div class="page-headline text-center">
+                                            <h2>Feedback</h2>
+                                            <p class="lead measure-lead mx-auto text-70">What other solopreneurs, business owners and individuals have to say about us after using our platform in reaching their goals.</p>
+                                        </div>
+                            
+                                        <div class="position-relative carousel-card">
+                                            <div class="row d-block js-mdk-carousel"
+                                                id="carousel-feedback">
+                                                <a class="carousel-control-next js-mdk-carousel-control mt-n24pt"
+                                                href="#carousel-feedback"
+                                                role="button"
+                                                data-slide="next">
+                                                    <span class="carousel-control-icon material-icons"
+                                                        aria-hidden="true">keyboard_arrow_right</span>
+                                                    <span class="sr-only">Next</span>
+                                                </a>
+                                                <div class="mdk-carousel__content">
+                            
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="card card--elevated card-body">
+                                                            <blockquote class="mb-0">
+                                                                <p class="text-70">
+                                                                    I was a little nervous about Talebee products in general but I was so impressed with how easy it was to get started with. I had no idea what I was doing, and it took me less than 15 minutes to set up my account and get started. After that, it's been a smoth sailing ever since 
+                                                                </p>
+                            
+                                                                <div class="media">
+                                                                    <div class="media-left">
+                                                                        <img src="../landing/images/256_michael-dam-258165-unsplash.jpg"
+                                                                            width="40"
+                                                                            alt="avatar"
+                                                                            class="rounded-circle">
+                                                                    </div>
+                                                                    <div class="media-body media-middle">
+                                                                        <p class="mb-0"><a href=""
+                                                                            class="text-body"><strong>Umberto Kass</strong></a></p>
+                                                                        <div class="rating">
+                                                                            <span class="rating__item"><span class="material-icons">star</span></span>
+                                                                            <span class="rating__item"><span class="material-icons">star</span></span>
+                                                                            <span class="rating__item"><span class="material-icons">star</span></span>
+                                                                            <span class="rating__item"><span class="material-icons">star</span></span>
+                                                                            <span class="rating__item"><span class="material-icons">star_border</span></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </blockquote>
+                                                        </div>
+                                                    </div>
+                            
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="card card--elevated card-body">
+                                                            <blockquote class="mb-0">
+                                                                <p class="text-70">
+                                                                    We've been using Talebee for couple of weeks now and we love it! Been able to manage our data has helped us and save us time, simplify processes, and ultimately become more productive. We couldn't be happier with the choice we made to use Talebee.
+                                                                </p>
+                            
+                                                                <div class="media">
+                                                                    <div class="media-left">
+                                                                        <img src="../landing/images/256_jeremy-banks-798787-unsplash.jpg"
+                                                                            width="40"
+                                                                            alt="avatar"
+                                                                            class="rounded-circle">
+                                                                    </div>
+                                                                    <div class="media-body media-middle">
+                                                                        <p class="mb-0"><a href=""
+                                                                            class="text-body"><strong>Umberto Kass</strong></a></p>
+                                                                        <div class="rating">
+                                                                            <span class="rating__item"><span class="material-icons">star</span></span>
+                                                                            <span class="rating__item"><span class="material-icons">star</span></span>
+                                                                            <span class="rating__item"><span class="material-icons">star</span></span>
+                                                                            <span class="rating__item"><span class="material-icons">star</span></span>
+                                                                            <span class="rating__item"><span class="material-icons">star_border</span></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </blockquote>
+                                                        </div>
+                                                    </div>
+                            
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="card card--elevated card-body">
+                                                            <blockquote class="mb-0">
+                                                                <p class="text-70">
+                                                                    Not only has it helped us to increase profits, it has enabled us to automate many of our business processes. Its easy to use and works flawlessly in migrating our contact lists.
+                                                                </p>
+                            
+                                                                <div class="media">
+                                                                    <div class="media-left">
+                                                                        <img src="../landing/images/256_michael-dam-258165-unsplash.jpg"
+                                                                            width="40"
+                                                                            alt="avatar"
+                                                                            class="rounded-circle">
+                                                                    </div>
+                                                                    <div class="media-body media-middle">
+                                                                        <p class="mb-0"><a href=""
+                                                                            class="text-body"><strong>Umberto Kass</strong></a></p>
+                                                                        <div class="rating">
+                                                                            <span class="rating__item"><span class="material-icons">star</span></span>
+                                                                            <span class="rating__item"><span class="material-icons">star</span></span>
+                                                                            <span class="rating__item"><span class="material-icons">star</span></span>
+                                                                            <span class="rating__item"><span class="material-icons">star</span></span>
+                                                                            <span class="rating__item"><span class="material-icons">star_border</span></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </blockquote>
+                                                        </div>
+                                                    </div>
+                            
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                            
+                            <div class="col-md-12 mx-auto mb-5 reveal">
+                                <div class=" text-center">
+                                    <div class="mr-2 d-inline"><a href="/login" class="btn btn-primary"> Get Started for free </a></div>
+                                    <div class="d-inline"><a href="/pricing" class="btn btn-info"> Pricing </a></div>
+                                </div>
+                            </div>
+                        
+                        </div>
+                    </div>
+                   
+                </div>
+
+            </div>
+            <div class="container mb-5 d-flex justify-content-between"> 
+                <div>
+                    <span class="mr-5"> &copy;  Talebee.</span>
+                    <a href="/pricing" class="mr-2">Pricing</a>
+                    <a href="https://twitter.com/talebeehq" class="mr-2">Twitter</a>
+                    <a href="https://instagram.com/talebeehq" class="mr-2">Instagram</a>
+                </div>
+                <div>
+                    <a href="#"  data-toggle="tooltip" data-placement="top" title="Click to read stories"> <span class="material-icons">blur_on</span></a>
+                </div>
+            </div>            
+       
+        </div>
+        
+       
+
+        <script src="../landing/vendor/jquery.min.js"></script>
+
+ 
+        <script src="../landing/vendor/popper.min.js"></script>
+        <script src="../landing/vendor/bootstrap.min.js"></script>
+
+
+        <script src="../landing/vendor/dom-factory.js"></script>
+
+  
+        <script src="../landing/vendor/material-design-kit.js"></script>
+
+
+        <script src="../landing/js/app.js"></script>
+
+
+        <script src="../landing/js/hljs.js"></script>
+
+        <script src="../landing/js/app-settings.js"></script>
+    </body>
+
+</html>
