@@ -16,48 +16,47 @@
         <meta name="twitter:creator" content="@talebeeHQ" />
         <meta name="twitter:domain" content="talebee.com" />
         <meta name="twitter:title" content="Build and manage your audience with confidence." />
-        <meta name="twitter:image" content="/img/android-chrome-192x192.png" />
-        <meta name="twitter:image:src" content="/img/android-chrome-192x192.png" />
+        <meta name="twitter:image" content="../img/android-chrome-192x192.png" />
+        <meta name="twitter:image:src" content="../img/android-chrome-192x192.png" />
         <meta name="twitter:image:alt" content="Talebee" />
         <meta name="twitter:description" content="Get yourself and your business organised in one place. Build and manage your audien with confidence." />
-        <meta property="og:url" content="https://talebee.com">
+        <meta property="og:url" content="https:/.com">
         <meta property="og:type" content="website">
         <meta property="og:site_name" content="Talebee">
         <meta data-n-head="1" name="og:title" content="Talebee">
         <meta data-n-head="1" name="og:description" content="Get yourself and your business organised in one place.">
-        <meta property="og:image" content="../talebee/img/android-chrome-192x192.png" />
-        <meta data-n-head="1" name="og:image" content="../talebee/img/android-chrome-192x192.png">
+        <meta property="og:image" content="../img/android-chrome-192x192.png" />
+        <meta data-n-head="1" name="og:image" content="../img/android-chrome-192x192.png">
         <meta property="og:description" content="Get yourself and your business organised in one place. Build and manage your audien with confidence." />
-        <link rel="shortcut icon" href="../talebee/img/favicon.png" type="image/x-icon">
-        <link rel="icon" type="image/png" sizes="32x32" href="../talebee/img/favicon.png">
+        <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+        <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon.png">
         <link rel="icon" type="image/png" sizes="192x192"  href="../img/android-chrome-192x192.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="../talebee/img/android-chrome-512x512.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="../talebee/img/apple-touch-icon.png">
-        <link rel="manifest" href="../talebee/img/site.webmanifest">
+        <link rel="icon" type="image/png" sizes="32x32" href="../img/android-chrome-512x512.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../img/apple-touch-icon.png">
+        <link rel="manifest" href="../img/site.webmanifest">
         <meta name="msapplication-TileColor" content="#ffffff">
        
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7COswald:300,400,500,700%7CRoboto:400,500%7CExo+2:600&display=swap" rel="stylesheet">
 
         <!-- Perfect Scrollbar -->
-        <link type="text/css" href="../talebee/vendor/perfect-scrollbar.css" rel="stylesheet">
+        <link type="text/css" href="../vendor/perfect-scrollbar.css" rel="stylesheet">
 
         <!-- Material Design Icons -->
-        <link type="text/css" href="../talebee/css/material-icons.css" rel="stylesheet">
+        <link type="text/css" href="../css/material-icons.css" rel="stylesheet">
 
         <!-- Font Awesome Icons -->
-        <link type="text/css" href="../talebee/css/fontawesome.css" rel="stylesheet">
+        <link type="text/css" href="../css/fontawesome.css" rel="stylesheet">
 
         <!-- Preloader -->
-        <link type="text/css" href="../talebee/vendor/spinkit.css" rel="stylesheet">
-        <link type="text/css" href="../talebee/css/preloader.css" rel="stylesheet">
+        <link type="text/css" href="../vendor/spinkit.css" rel="stylesheet">
+        <link type="text/css" href="../css/preloader.css" rel="stylesheet">
 
         <!-- App CSS -->
-        <link type="text/css" href="../talebee/css/app.css" rel="stylesheet">
+        <link type="text/css" href="../css/app.css" rel="stylesheet">
 
         <!-- Dark Mode CSS (optional) -->
-        <link type="text/css" href="../css/talebee/dark-mode.css" rel="stylesheet">
+        <link type="text/css" href="../css/dark-mode.css" rel="stylesheet">
  
-       @csrf
        <style>
             .reveal{
             position: relative;
@@ -109,7 +108,7 @@
             <!-- Header -->
             <div id="header" class="mdk-header js-mdk-header mb-0" data-fixed>
                 <div class="mdk-header__content">
-                    @include('landing.nav')
+                 
                 </div>
             </div>
 
@@ -141,8 +140,6 @@
                                         </div>
         
                                     </div>
-                                    
-                                    @include('errors.error_message')
                                     <div class="tab-content">
                                         <div class="tab-pane active text-70" id="monthly">
                                             <div class="row card-group-row mb-16pt mb-lg-40pt">
@@ -223,9 +220,7 @@
                                                     </div>
         
                                                 </div>
-                                                @empty
-        
-                                                @endforelse
+                                             
                                             </div>
                                         </div>
                                     </div>
@@ -320,7 +315,7 @@
         
                                                             <div class="media">
                                                                 <div class="media-left">
-                                                                    <img src="{{asset('assets/assets-new/images/256_jeremy-banks-798787-unsplash.jpg')}}"
+                                                                    <img src="../images/256_jeremy-banks-798787-unsplash.jpg"
                                                                         width="40"
                                                                         alt="avatar"
                                                                         class="rounded-circle">
@@ -350,7 +345,7 @@
                                                                 
                                                             <div class="media">
                                                                 <div class="media-left">
-                                                                    <img src="{{asset('assets/assets-new/images/256_michael-dam-258165-unsplash.jpg')}}"
+                                                                    <img src="../images/256_michael-dam-258165-unsplash.jpg"
                                                                         width="40"
                                                                         alt="avatar"
                                                                         class="rounded-circle">
@@ -379,7 +374,7 @@
                                                             <br>
                                                             <div class="media">
                                                                 <div class="media-left">
-                                                                    <img src="{{asset('assets/assets-new/images/256_jeremy-banks-798787-unsplash.jpg')}}"
+                                                                    <img src="../images/256_jeremy-banks-798787-unsplash.jpg"
                                                                         width="40"
                                                                         alt="avatar"
                                                                         class="rounded-circle">
@@ -486,7 +481,7 @@
                                                     <div class="flex">
                                                         <a class="card-title mb-4pt"
                                                         href="">I found a bug. Where can I report that?</a>
-                                                        <p class="text-70 mb-0">In the unlikely situation you stumble across a bug, go ahead and shoot us an email or drop a message for us in our DM on <a href="https://twitter.com/talebeeHQ"> twitter @talebeeHQ</a>.</p>
+                                                        <p class="text-70 mb-0">In the unlikely situation you stumble across a bug, go ahead and shoot us an email or drop a message for us in our DM on <a href="https://twitter.comHQ"> twitter @talebeeHQ</a>.</p>
                                                     </div>
                                                 </div>
                                                 <div class="card-footer d-flex lh-1 px-16pt py-8pt">
@@ -507,37 +502,33 @@
             </div>
             <div class="container mb-5"> 
                 <span class="mr-5"> &copy; {{now()->format('Y')}}. Talebee.</span>
-                <a href="https://twitter.com/talebeehq" class="mr-2">Twitter</a>
-                <a href="https://instagram.com/talebeehq" class="mr-2">Instagram</a>
-                {{-- <a href="https://facebook.com/talebeehq" class="mr-2">Facebook</a>
-                <a href="https://linkedin.com/in/talebeehq" class="mr-2">LinkedIn</a> --}}
+                <a href="https://twitter.comhq" class="mr-2">Twitter</a>
+                <a href="https://instagram.comhq" class="mr-2">Instagram</a>
             </div>            
        
         </div>
     
 
-        <script src="{{asset('assets/assets-new/vendor/jquery.min.js')}}"></script>
+       
+        <script src="../vendor/jquery.min.js"></script>
 
-        <!-- Bootstrap -->
-        <script src="{{asset('assets/assets-new/vendor/popper.min.js')}}"></script>
-        <script src="{{asset('assets/assets-new/vendor/bootstrap.min.js')}}"></script>
+ 
+        <script src="../vendor/popper.min.js"></script>
+        <script src="../vendor/bootstrap.min.js"></script>
 
-   
-        <!-- DOM Factory -->
-        <script src="{{asset('assets/assets-new/vendor/dom-factory.js')}}"></script>
 
-        <!-- MDK -->
-        <script src="{{asset('assets/assets-new/vendor/material-design-kit.js')}}"></script>
+        <script src="../vendor/dom-factory.js"></script>
 
-        <!-- App JS -->
-        <script src="{{asset('assets/assets-new/js/app.js')}}"></script>
+  
+        <script src="../vendor/material-design-kit.js"></script>
 
-        <!-- Highlight.js -->
-        <script src="{{asset('assets/assets-new/js/hljs.js')}}"></script>
 
-        <!-- App Settings (safe to remove) -->
-        <script src="{{asset('assets/assets-new/js/app-settings.js')}}"></script>
-        <script src="{{asset('assets/talejs/business.js')}}"></script>
+        <script src="../js/app.js"></script>
+
+
+        <script src="../js/hljs.js"></script>
+
+        <script src="../js/app-settings.js"></script>
     </body>
 
 </html>
