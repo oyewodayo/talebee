@@ -8,45 +8,55 @@
         <meta name="description" content="Get yourself and your business organised. Build and manage your audien.">
         <meta name="keywords" content="Email, Newsletter, Operations, Marketing,Grow your customer, SEO, Campaign, Schedule, Contact list, traffic">
         <meta name="author" content="Temidayo Oyewo">
-        <meta data-n-head="1" name="twitter:card" content="summary_large_image">
+        <meta data-n-head="1" name="twitter:card" content="summary">
         <meta name="twitter:site" content="@TalebeeHQ">
-        <!--<meta name="twitter:app:country" content="NG">-->
-        <meta property="og:url" content="https://Talebee.com">
+        
+        <meta name="twitter:label1" content="Talebee" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@talebeeHQ" />
+        <meta name="twitter:domain" content="talebee.com" />
+        <meta name="twitter:title" content="Build and manage your audience with confidence." />
+        <meta name="twitter:image" content="/img/android-chrome-192x192.png" />
+        <meta name="twitter:image:src" content="/img/android-chrome-192x192.png" />
+        <meta name="twitter:image:alt" content="Talebee" />
+        <meta name="twitter:description" content="Get yourself and your business organised in one place. Build and manage your audien with confidence." />
+        <meta property="og:url" content="https://talebee.com">
         <meta property="og:type" content="website">
         <meta property="og:site_name" content="Talebee">
         <meta data-n-head="1" name="og:title" content="Talebee">
-        <meta data-n-head="1" name="og:description" content="Get yourself and your business organised.">
-        <meta property="og:image" content="{{ asset('assets/img/apple-icon-180x180.png') }}" />
-        <meta data-n-head="1" name="og:image" content="{{ asset('assets/img/apple-icon-180x180.png') }}">
-        <meta property="og:description" content="Send custom emails, manage your newsletters and convert your contacts into happy customers. Make it happen!" />
-        <link rel="shortcut icon" href="{{ asset('assets/img/favicon.png') }}" type="image/x-icon">
-        <link rel="icon" type="image/png" sizes="32x32" href="{{asset('img/favicon.png')}}">
-        <link rel="icon" type="image/png" sizes="192x192"  href="{{ asset('assets/img/android-chrome-192x192.png') }}">
-        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/img/android-chrome-512x512.png') }}">
-        <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('assets/img/apple-touch-icon.png') }}">
-        <link rel="manifest" href="{{ asset('assets/img/site.webmanifest') }}">
+        <meta data-n-head="1" name="og:description" content="Get yourself and your business organised in one place.">
+        <meta property="og:image" content="../talebee/img/android-chrome-192x192.png" />
+        <meta data-n-head="1" name="og:image" content="../talebee/img/android-chrome-192x192.png">
+        <meta property="og:description" content="Get yourself and your business organised in one place. Build and manage your audien with confidence." />
+        <link rel="shortcut icon" href="../talebee/img/favicon.png" type="image/x-icon">
+        <link rel="icon" type="image/png" sizes="32x32" href="../talebee/img/favicon.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="../img/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../talebee/img/android-chrome-512x512.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../talebee/img/apple-touch-icon.png">
+        <link rel="manifest" href="../talebee/img/site.webmanifest">
         <meta name="msapplication-TileColor" content="#ffffff">
        
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7COswald:300,400,500,700%7CRoboto:400,500%7CExo+2:600&display=swap" rel="stylesheet">
 
         <!-- Perfect Scrollbar -->
-        <link type="text/css" href="{{asset('assets/assets-new/vendor/perfect-scrollbar.css')}}" rel="stylesheet">
+        <link type="text/css" href="../talebee/vendor/perfect-scrollbar.css" rel="stylesheet">
 
         <!-- Material Design Icons -->
-        <link type="text/css" href="{{asset('assets/assets-new/css/material-icons.css')}}" rel="stylesheet">
+        <link type="text/css" href="../talebee/css/material-icons.css" rel="stylesheet">
 
         <!-- Font Awesome Icons -->
-        <link type="text/css" href="{{asset('assets/assets-new/css/fontawesome.css')}}" rel="stylesheet">
+        <link type="text/css" href="../talebee/css/fontawesome.css" rel="stylesheet">
 
         <!-- Preloader -->
-        <link type="text/css" href="{{asset('assets/assets-new/vendor/spinkit.css')}}" rel="stylesheet">
-        <link type="text/css" href="{{asset('assets/assets-new/css/preloader.css')}}" rel="stylesheet">
+        <link type="text/css" href="../talebee/vendor/spinkit.css" rel="stylesheet">
+        <link type="text/css" href="../talebee/css/preloader.css" rel="stylesheet">
 
         <!-- App CSS -->
-        <link type="text/css" href="{{asset('assets/assets-new/css/app.css')}}" rel="stylesheet">
+        <link type="text/css" href="../talebee/css/app.css" rel="stylesheet">
 
         <!-- Dark Mode CSS (optional) -->
-        <link type="text/css" href="{{asset('assets/assets-new/css/dark-mode.css')}}" rel="stylesheet">
+        <link type="text/css" href="../css/talebee/dark-mode.css" rel="stylesheet">
+ 
        @csrf
        <style>
             .reveal{
@@ -136,108 +146,79 @@
                                     <div class="tab-content">
                                         <div class="tab-pane active text-70" id="monthly">
                                             <div class="row card-group-row mb-16pt mb-lg-40pt">
-                                                @forelse ($subscriptions as $subscription)
                                                 <div class="col-lg-4 col-sm-6 card-group-row__col">
-                                                    <div class="card card-group-row__card text-center o-hidden {{$subscription->slug=="premium"?'card--raised':'' }} ">
-                                                        @if ($subscription->slug=="premium")
+                                                    <div class="card card-group-row__card text-center o-hidden card--raised">
+                                                  
                                                         <span class="corner-ribbon corner-ribbon--default-right-top corner-ribbon--shadow bg-accent text-white">Start</span>  
-                                                                                
-                                                        @endif
+                                                   
                                                         <div class="card-body d-flex flex-column">
                                                             <div class="flex-grow mb-16pt">
                                                                 <span class="w-64 h-64 icon-holder icon-holder--outline-accent rounded-circle d-inline-flex mb-16pt">
                                                                     <i class="material-icons">
-                                                                        @switch($subscription->slug)
-                                                                            @case('professional')
-                                                                                group
-                                                                                @break
-                                                                            @case('premium')
-                                                                                business_center
-                                                                                @break
-                                                                            @case('business')
-                                                                                business
-                                                                                @break
-                                                                        
-                                                                            @default
-                                                                                person
-                                                                        @endswitch
+                                                                       
+                                                                        business_center
+                                                                               
                                                                     </i>
                                                                 </span>
-                                                                <h4 class="mb-8pt">{{$subscription->name }}</h4>
+                                                                <h4 class="mb-8pt">Premium</h4>
                                                                 <p class="text-70 text-left mb-0">
                                                                     <ul class="list-unstyled">
-                                                                        @foreach ($subscription->description as $description )
-                                                                        <li class="">{!! $description !!}</li>
-                                                                        @endforeach
+
+                                                                        <li class=""></li>
+                                                                      
                                                                     </ul>
                                                                 </p>
                                                             </div>
                                                             <p class="d-flex justify-content-center align-items-center m-0">
                                                                 <span class="h4 m-0 font-weight-normal">&dollar;</span>
-                                                                <span class="h1 m-0 font-weight-normal">{{ json_decode($subscription->price)->monthly }}</span>
+                                                                <span class="h1 m-0 font-weight-normal">$5</span>
                                                                 <span class="h4 m-0 font-weight-normal">/ month</span>
                                                             </p>
                                                             <p class="lh-1 text-muted mb-0"><small></small></p>
                                                         </div>
                                                         <div class="card-footer">
-                                                            <a href="{{ route('login') }}" id="subscribe-to-monthly" class="btn subscribe-to-monthly {{$subscription->slug=="premium"?'btn-accent':'btn-outline-secondary' }}" data-meta='{"period":"monthly","subscription":"{{$subscription->slug}}","plan":{{$subscription->id}},"price":{{json_decode($subscription->price)->monthly}}}'>Get started</a>
+                                                            <a href="" id="subscribe-to-monthly" class="btn subscribe-to-monthly btn-outline-secondary">Get started</a>
                                                         </div>
                                                     </div>
         
                                                 </div>
-                                                @empty
-        
-                                                @endforelse
                                             
                                             </div>
                                         </div>
         
                                         <div class="tab-pane text-70" id="annual">
                                             <div class="row card-group-row mb-16pt mb-lg-40pt">
-                                                @forelse ($subscriptions as $subscription)
                                                 <div class="col-lg-4 col-sm-6 card-group-row__col">
-                                                    <div class="card card-group-row__card text-center o-hidden {{$subscription->slug=="premium"?'card--raised':'' }} ">
-                                                        @if ($subscription->slug=="premium")
-                                                            <span class="corner-ribbon corner-ribbon--default-right-top corner-ribbon--shadow bg-accent text-white">Start</span>                                                                          
-                                                        @endif
+                                                    <div class="card card-group-row__card text-center o-hidden card--raised">
+                                                    
+                                                        <span class="corner-ribbon corner-ribbon--default-right-top corner-ribbon--shadow bg-accent text-white">Start</span>                                                                          
+                                                    
                                                         <div class="card-body d-flex flex-column">
                                                             <div class="flex-grow mb-16pt">
                                                                 <span class="w-64 h-64 icon-holder icon-holder--outline-accent rounded-circle d-inline-flex mb-16pt">
                                                                     <i class="material-icons">
-                                                                        @switch($subscription->slug)
-                                                                            @case('professional')
-                                                                                group
-                                                                                @break
-                                                                            @case('premium')
-                                                                                business_center
-                                                                                @break
-                                                                            @case('business')
-                                                                                business
-                                                                                @break
-                                                                        
-                                                                            @default
-                                                                                person
-                                                                        @endswitch
+                                                                      
+                                                                        business_center
+                                                                                
                                                                     </i>
                                                                 </span>
-                                                                <h4 class="mb-8pt">{{$subscription->name }}</h4>
+                                                                <h4 class="mb-8pt">Premium</h4>
                                                                 <p class="text-70 text-left mb-0">
                                                                     <ul class="list-unstyled">
-                                                                        @foreach ($subscription->description as $description )
-                                                                        <li class="">{!! $description !!}</li>
-                                                                        @endforeach
+                                                                        <li class=""></li>
+                                                                    
                                                                     </ul>
                                                                 </p>
                                                             </div>
                                                             <p class="d-flex justify-content-center align-items-center m-0">
                                                                 <span class="h4 m-0 font-weight-normal">&dollar;</span>
-                                                                <span class="h1 m-0 font-weight-normal">{{ json_decode($subscription->price)->yearly }}</span>
+                                                                <span class="h1 m-0 font-weight-normal">$80</span>
                                                                 <span class="h4 m-0 font-weight-normal">/ year</span>
                                                             </p>
                                                             <p class="lh-1 text-muted mb-0"><small>You saved 15%</small></p>
                                                         </div>
                                                         <div class="card-footer">
-                                                            <a href="{{ route('login') }}" id="subscribe-to-monthly" class="btn subscribe-to-monthly {{$subscription->slug=="premium"?'btn-accent':'btn-outline-secondary' }}" data-meta='{"period":"yearly","subscription":"{{$subscription->slug}}","plan":{{$subscription->id}},"price":{{json_decode($subscription->price)->yearly}}}'>Get started</a>
+                                                            <a href="" id="subscribe-to-monthly" class="btn subscribe-to-monthly btn-accent">Get started</a>
                                                         </div>
                                                     </div>
         
