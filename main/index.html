@@ -34,6 +34,7 @@
         <link rel="icon" type="image/png" sizes="32x32" href="./img/android-chrome-512x512.png">
         <link rel="icon" type="image/png" sizes="96x96" href="./img/apple-touch-icon.png">
         <link rel="manifest" href="./img/site.webmanifest">
+        <link href="/dist/output.css" rel="stylesheet">
         <meta name="msapplication-TileColor" content="#ffffff">
 
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7COswald:300,400,500,700%7CRoboto:400,500%7CExo+2:600&display=swap" rel="stylesheet">
@@ -55,7 +56,7 @@
         <link type="text/css" href="./css/app.css" rel="stylesheet">
 
         <!-- Dark Mode CSS (optional) -->
-        <link type="text/css" href="./css/dark-mode.css" rel="stylesheet">
+        <link type="text/css" href="./main/css/dark-mode.css" rel="stylesheet">
 
        <style>
             .reveal{
@@ -128,9 +129,9 @@
                             <span class="d-none d-lg-block">Talebee</span>
                         </a>
                         <div class="flex"></div>
-
-                        <div class="">
-                            <a href="./login.html">
+                        
+                        <div class="font-bold invisible">
+                            <a href="./login.html" >
                                 Login
                             </a>
                         </div>
@@ -160,10 +161,10 @@
                             </div>
                             <div class="col-md-10 mx-auto mb-5 mt-4">
                                 <div class="col-md-6 mx-auto ">
-                                    <form action="../login.html">
+                                    <form action="./login.html">
                                     <div class="d-flex text-center">
-                                        <input id="email" class="form-control" value=" " placeholder="Your email address ...">
-                                        <button  type="submit" class="btn btn-primary" onclick="this.form.submit(); this.readonly=true;this.innerHTML=`<span class='spinner-grow spinner-grow-sm text-white'> </span>&nbsp; ...`;" style="width:120px;height:38px; margin-left: -110px;z-index:1000;border-radius:none"> Get started </button>
+                                        <input id="email" class="form-control" value=" " placeholder="Your email address ..">
+                                        <button  type="submit" class="btn btn-primary" onclick="this.form.submit(); this.readonly=true;this.innerHTML=`<span class='spinner-grow spinner-grow-sm text-white'> </span>&nbsp; ..`;" style="width:120px;height:38px; margin-left: -110px;z-index:1000;border-radius:none"> Get started </button>
                                     </div>
                                 </form>
                                 </div>
@@ -185,7 +186,7 @@
                                         Manage all your list in one place. Edit existing and add new contact.
                                     </p>
                                 </div>
-                                <img src="../img/list1.png" alt="" style="width: 100%">
+                                <img src="./img/list1.png" alt="" style="width: 100%">
                             </div>
                             <div class="col-md-12 mx-auto mb-5 zoom">
                                 <div class="col-md-6 col-sm-6 content alert alert-dismissible">
@@ -200,7 +201,7 @@
                                         Import excel record of your audience contact list. Excel files(.xlsx,.xls,.csv,.ods)
                                     </p>
                                 </div>
-                                <img src="../img/import1.png" alt="" style="width: 100%">
+                                <img src="./img/import1.png" alt="" style="width: 100%">
                             </div>
 
                             <div class="col-md-12 mx-auto mb-5 zoom">
@@ -216,7 +217,7 @@
                                         Monitor your subscriptions in realtime,track impressions and setup your newsletter page.
                                     </p>
                                 </div>
-                                <img src="../img/newsletter1.png" alt="" style="width: 100%">
+                                <img src="./img/newsletter1.png" alt="" style="width: 100%">
                             </div>
 
                             <div class="col-md-12 mx-auto mb-5 zoom">
@@ -232,7 +233,7 @@
                                         Curate your story nicely. Search for relevant images for your story. Engage your audience and customers with interesting stories.
                                     </p>
                                 </div>
-                                <img src="../img/story1.png" alt="" style="width: 100%">
+                                <img src="./img/story1.png" alt="" style="width: 100%">
                             </div>
 
                             <div class="col-md-12 mx-auto mb-5 zoom">
@@ -248,7 +249,7 @@
                                     Your stories are organized not to loose track of draft and schedules.
                                     </p>
                                 </div>
-                                <img src="../img/timeline1.png" alt="" style="width: 100%">
+                                <img src="./img/timeline1.png" alt="" style="width: 100%">
                             </div>
 
                             <div class="col-md-12 mt-5">
@@ -322,7 +323,7 @@
 
                                                                 <div class="media">
                                                                     <div class="media-left">
-                                                                        <img src="../images/256_michael-dam-258165-unsplash.jpg"
+                                                                        <img src="./images/256_michael-dam-258165-unsplash.jpg"
                                                                             width="40"
                                                                             alt="avatar"
                                                                             class="rounded-circle">
@@ -352,7 +353,7 @@
 
                                                                 <div class="media">
                                                                     <div class="media-left">
-                                                                        <img src="../images/256_jeremy-banks-798787-unsplash.jpg"
+                                                                        <img src="./images/256_jeremy-banks-798787-unsplash.jpg"
                                                                             width="40"
                                                                             alt="avatar"
                                                                             class="rounded-circle">
@@ -382,7 +383,7 @@
 
                                                                 <div class="media">
                                                                     <div class="media-left">
-                                                                        <img src="../images/256_michael-dam-258165-unsplash.jpg"
+                                                                        <img src="./images/256_michael-dam-258165-unsplash.jpg"
                                                                             width="40"
                                                                             alt="avatar"
                                                                             class="rounded-circle">
@@ -424,6 +425,7 @@
                 </div>
 
             </div>
+
             <div class="container mb-5 d-flex justify-content-between">
                 <div>
                     <span class="mr-5"> &copy;  Talebee.</span>
@@ -440,25 +442,25 @@
 
 
 
-        <script src="../vendor/jquery.min.js"></script>
+        <script src="./vendor/jquery.min.js"></script>
 
 
-        <script src="../vendor/popper.min.js"></script>
-        <script src="../vendor/bootstrap.min.js"></script>
+        <script src="./vendor/popper.min.js"></script>
+        <script src="./vendor/bootstrap.min.js"></script>
 
 
-        <script src="../vendor/dom-factory.js"></script>
+        <script src="./vendor/dom-factory.js"></script>
 
 
-        <script src="../vendor/material-design-kit.js"></script>
+        <script src="./vendor/material-design-kit.js"></script>
 
 
-        <script src="../js/app.js"></script>
+        <script src="./js/app.js"></script>
 
 
-        <script src="../js/hljs.js"></script>
+        <script src="./js/hljs.js"></script>
 
-        <script src="../js/app-settings.js"></script>
+        <script src="./js/app-settings.js"></script>
     </body>
 
 </html>
