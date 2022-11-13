@@ -34,10 +34,11 @@
         <link rel="icon" type="image/png" sizes="32x32" href="./img/android-chrome-512x512.png">
         <link rel="icon" type="image/png" sizes="96x96" href="./img/apple-touch-icon.png">
         <link rel="manifest" href="./img/site.webmanifest">
-        <link href="/dist/output.css" rel="stylesheet">
         <meta name="msapplication-TileColor" content="#ffffff">
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7COswald:300,400,500,700%7CRoboto:400,500%7CExo+2:600&display=swap" rel="stylesheet">
+        <!-- <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7COswald:300,400,500,700%7CRoboto:400,500%7CExo+2:600&display=swap" rel="stylesheet"> -->
+        <link href="https://api.fontshare.com/v2/css?f[]=satoshi@1&f[]=cabinet-grotesk@1&display=swap" rel="stylesheet">
+
 
         <!-- Perfect Scrollbar -->
         <link type="text/css" href="./vendor/perfect-scrollbar.css" rel="stylesheet">
@@ -49,14 +50,14 @@
         <link type="text/css" href="./css/fontawesome.css" rel="stylesheet">
 
         <!-- Preloader -->
-        <link type="text/css" href="./vendor/spinkit.css" rel="stylesheet">
-        <link type="text/css" href="./css/preloader.css" rel="stylesheet">
+        <!-- <link type="text/css" href="./vendor/spinkit.css" rel="stylesheet">
+        <link type="text/css" href="./css/preloader.css" rel="stylesheet"> -->
 
         <!-- App CSS -->
-        <link type="text/css" href="./css/app.css" rel="stylesheet">
+
 
         <!-- Dark Mode CSS (optional) -->
-        <link type="text/css" href="./main/css/dark-mode.css" rel="stylesheet">
+        <link type="text/css" href="./css/dark-mode.css" rel="stylesheet">
 
        <style>
             .reveal{
@@ -104,13 +105,13 @@
     </head>
 
     <body class="layout-sticky-subnav layout-default ">
-
+<!--
         <div class="preloader">
             <div class="sk-bounce">
                 <div class="sk-bounce-dot"></div>
                 <div class="sk-bounce-dot"></div>
             </div>
-        </div>
+        </div> -->
 
         <!-- Header Layout -->
         <div class="mdk-header-layout js-mdk-header-layout">
@@ -129,7 +130,7 @@
                             <span class="d-none d-lg-block">Talebee</span>
                         </a>
                         <div class="flex"></div>
-                        
+
                         <div class="font-bold invisible">
                             <a href="./login.html" >
                                 Login
@@ -156,8 +157,8 @@
                     <div class="container page__container page-section" style="margin-top:30px">
                         <div class="row mb-5 ">
                             <div class="col-md-12">
-                                <h1 class="text-center">Fast, <span style="color: #8b0000;">Powerful</span> and Reliable  </h1>
-                                <div class="text-center h6  mt-n3 ">Get yourself and your <br> business organised in one place.</div>
+                                <h1 class="text-center">Fast, <span class="text-red-400">Powerful</span> and Reliable  </h1>
+                                <div class="text-center h6 mt-n3 ">Get yourself and your <br> business organised in one place.</div>
                             </div>
                             <div class="col-md-10 mx-auto mb-5 mt-4">
                                 <div class="col-md-6 mx-auto ">
@@ -446,7 +447,7 @@
 
 
         <script src="./vendor/popper.min.js"></script>
-        <script src="./vendor/bootstrap.min.js"></script>
+        <!-- <script src="./vendor/bootstrap.min.js"></script> -->
 
 
         <script src="./vendor/dom-factory.js"></script>
@@ -461,6 +462,7 @@
         <script src="./js/hljs.js"></script>
 
         <script src="./js/app-settings.js"></script>
+        <script type="module" src="/main.js"></script>
     </body>
 
 </html>
