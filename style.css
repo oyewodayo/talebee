@@ -3,10 +3,14 @@
 @tailwind utilities;
 
 body{
-  font-family: 'Satoshi', sans-serif;
+  font-family: 'General Sans', sans-serif;
   overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6, .font-display{
-  font-family: 'Cabinet Grotesk', sans-serif;
+  font-family: 'General Sans', sans-serif;
+}
+.hero{
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgb(255 184 215) 0%, rgb(215 234 255) 100%);
 }
