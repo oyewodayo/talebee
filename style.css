@@ -11,6 +11,6 @@ h1, h2, h3, h4, h5, h6, .font-display{
   font-family: 'General Sans', sans-serif;
 }
 .hero{
-  background: rgb(255, 255, 255);
-  background: radial-gradient(circle, #00C2FF, rgb(243, 244, 245) 100%);
+  /* background: rgb(255, 255, 255);
+  background: radial-gradient(circle, #00C2FF, rgb(243, 244, 245) 100%); */
 }
