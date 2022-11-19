@@ -55,6 +55,7 @@ h1, h2, h3, h4, h5, h6, .font-display{
   opacity:0.7;
   border-radius:50%;
   padding:0.1em 0.25em;
+  animation: anime 4s linear 2s;
 }
 .circle-sketch-highlight:after{
   content:"";
@@ -72,4 +73,37 @@ h1, h2, h3, h4, h5, h6, .font-display{
   transform:rotate(-1deg);
   opacity:0.7;
   border-radius:50%;
+}
+.nav-btn-2{
+  transition: transform 0.3s ease;
+  display: block;
+}
+.nav-btn-2::after, .nav-btn-2::before{
+  content:"";
+  position: absolute;
+  opacity: 0.3;
+  background-color: black;
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: -10;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+.nav-btn-2:hover{
+  /* background: white; */
+  transform: translate(-12px, -12px);
+}
+.nav-btn-2:hover::after{
+  transform: translate(6px, 6px)
+}
+.nav-btn-2:hover::before{
+  transform: translate(12px, 12px)
+}
+
+@keyframes anime{
+  from {width: 0%; border-width: 0px}
+  to {width: 110%; border-width: 2px}
 }

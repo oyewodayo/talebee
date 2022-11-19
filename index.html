@@ -124,8 +124,8 @@
   <!-- Header Layout -->
   <div class="mdk-header-layout js-mdk-header-layout">
     <!-- Header -->
-    <div class="fixed w-screen">
-      <div class="flex w-full mx-auto justify-between pt-2 items-center p-6 smd:p-3 smd:pt-1" id="default-navbar"
+    <div class="fixed w-screen mb-[10em]">
+      <div class="flex w-full mx-auto justify-between pt-4 items-center p-6 smd:p-3 smd:pt-1" id="default-navbar"
         data-primary>
         <div class="flex items-center gap-6">
           <div class="flex items-center gap-4 smd:gap-1">
@@ -154,11 +154,11 @@
           <div class="">
             <a href="./login.html">Login</a>
           </div>
-          <div class="bg-black text-white p-5 rounded-[2.5em] hover:bg-[#00C2FF] hover:text-black smd:p-3">
-            <a href="./register.html" class="">
+          <button class="relative ">
+            <a href="./register.html" class="bg-black inline-block text-white p-5 rounded-[1.8em] nav-btn-2 smd:p-3 ">
               Get Started-Free →
             </a>
-          </div>
+          </button>
         </div>
       </div>
     </div>
@@ -184,280 +184,294 @@
     <!-- // END Header -->
 
     <!-- Header Layout Content -->
-    <!-- <div class="mdk-header-layout__content page-content">
-                <div class=" pt-32pt pt-sm-64pt pb-32pt">
-                    <div class="container page__container page-section" style="margin-top:30px">
-                        <div class="row mb-5 ">
-                            <div class="col-md-12">
-                                <h1 class="text-center">Fast, <span class="text-red-400">Powerful</span> and Reliable  </h1>
-                                <div class="text-center h6 mt-n3 ">Get yourself and your <br> business organised in one place.</div>
-                            </div>
-                            <div class="col-md-10 mx-auto mb-5 mt-4">
-                                <div class="col-md-6 mx-auto ">
-                                    <form action="./login.html">
-                                    <div class="d-flex text-center">
-                                        <input id="email" class="form-control" value=" " placeholder="Your email address ..">
-                                        <button  type="submit" class="btn btn-primary" onclick="this.form.submit(); this.readonly=true;this.innerHTML=`<span class='spinner-grow spinner-grow-sm text-white'> </span>&nbsp; ..`;" style="width:120px;height:38px; margin-left: -110px;z-index:1000;border-radius:none"> Get started </button>
-                                    </div>
-                                </form>
-                                </div>
-                                <div id="feedback" class="mt-2"></div>
-                            </div>
-
-
-                            <div class="col-md-12 mx-auto mb-5 zoom">
-                                <div class="col-md-6 col-sm-6  content alert alert-dismissible">
-                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                    <h2>
-                                        Audience
-                                    </h2>
-
-                                    <p>
-                                        Build your audience with confidence. <br>
-                                        Manage all your list in one place. Edit existing and add new contact.
-                                    </p>
-                                </div>
-                                <img src="./img/list1.png" alt="" style="width: 100%">
-                            </div>
-                            <div class="col-md-12 mx-auto mb-5 zoom">
-                                <div class="col-md-6 col-sm-6 content alert alert-dismissible">
-                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                    <h2>
-                                        Import List
-                                    </h2>
-
-                                    <p>
-                                        Import excel record of your audience contact list. Excel files(.xlsx,.xls,.csv,.ods)
-                                    </p>
-                                </div>
-                                <img src="./img/import1.png" alt="" style="width: 100%">
-                            </div>
-
-                            <div class="col-md-12 mx-auto mb-5 zoom">
-                                <div class="col-md-6 col-sm-6  content alert alert-dismissible">
-                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                    <h2>
-                                        Monitor
-                                    </h2>
-
-                                    <p>
-                                        Monitor your subscriptions in realtime,track impressions and setup your newsletter page.
-                                    </p>
-                                </div>
-                                <img src="./img/newsletter1.png" alt="" style="width: 100%">
-                            </div>
-
-                            <div class="col-md-12 mx-auto mb-5 zoom">
-                                <div class="col-md-6 col-sm-6  content alert alert-dismissible">
-                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                    <h2>
-                                        Story
-                                    </h2>
-
-                                    <p>
-                                        Curate your story nicely. Search for relevant images for your story. Engage your audience and customers with interesting stories.
-                                    </p>
-                                </div>
-                                <img src="./img/story1.png" alt="" style="width: 100%">
-                            </div>
-
-                            <div class="col-md-12 mx-auto mb-5 zoom">
-                                <div class="col-md-6 col-sm-6  content alert alert-dismissible">
-                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                    <h2>
-                                        Timeline
-                                    </h2>
-
-                                    <p>
-                                    Your stories are organized not to loose track of draft and schedules.
-                                    </p>
-                                </div>
-                                <img src="./img/timeline1.png" alt="" style="width: 100%">
-                            </div>
-
-                            <div class="col-md-12 mt-5">
-                                <h2>A platform you can depend on.</h2>
-                            </div>
-                            <div class="col-lg-3 col-sm-6 card-group-row__col" >
-                                <div class="card card-group-row__card text-center o-hidden card--raised" style="border-radius: 20px">
-
-                                    <div class="card-footer">
-                                        <a href="#" id="subscribe-to-monthly" class="btn subscribe-to-monthly "> For Creators</a>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="col-lg-3 col-sm-6 card-group-row__col" >
-                                <div class="card card-group-row__card text-center o-hidden card--raised" style="border-radius: 20px">
-
-                                    <div class="card-footer">
-                                        <a href="#" id="subscribe-to-monthly" class="btn subscribe-to-monthly "> For Publishers </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-sm-6 card-group-row__col" >
-                                <div class="card card-group-row__card text-center o-hidden card--raised">
-
-                                    <div class="card-footer">
-                                        <a href="#" id="subscribe-to-monthly" class="btn subscribe-to-monthly ">For Business</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-sm-6 card-group-row__col" >
-                                <div class="card card-group-row__card text-center o-hidden card--raised">
-
-                                    <div class="card-footer">
-                                        <a href="#" id="subscribe-to-monthly" class="btn subscribe-to-monthly ">For You</a>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="col-md-12 mx-auto mb-5">
-                                <div class="page-section border-bottom-1">
-                                    <div class="container-fluid page__container">
-                                        <div class="page-headline text-center">
-                                            <h2>Feedback</h2>
-                                            <p class="lead measure-lead mx-auto text-70">What other solopreneurs, business owners and individuals have to say about us after using our platform in reaching their goals.</p>
-                                        </div>
-
-                                        <div class="position-relative carousel-card">
-                                            <div class="row d-block js-mdk-carousel"
-                                                id="carousel-feedback">
-                                                <a class="carousel-control-next js-mdk-carousel-control mt-n24pt"
-                                                href="#carousel-feedback"
-                                                role="button"
-                                                data-slide="next">
-                                                    <span class="carousel-control-icon material-icons"
-                                                        aria-hidden="true">keyboard_arrow_right</span>
-                                                    <span class="sr-only">Next</span>
-                                                </a>
-                                                <div class="mdk-carousel__content">
-
-                                                    <div class="col-12 col-md-6">
-                                                        <div class="card card--elevated card-body">
-                                                            <blockquote class="mb-0">
-                                                                <p class="text-70">
-                                                                    I was a little nervous about Talebee products in general but I was so impressed with how easy it was to get started with. I had no idea what I was doing, and it took me less than 15 minutes to set up my account and get started. After that, it's been a smoth sailing ever since
-                                                                </p>
-
-                                                                <div class="media">
-                                                                    <div class="media-left">
-                                                                        <img src="./images/256_michael-dam-258165-unsplash.jpg"
-                                                                            width="40"
-                                                                            alt="avatar"
-                                                                            class="rounded-circle">
-                                                                    </div>
-                                                                    <div class="media-body media-middle">
-                                                                        <p class="mb-0"><a href=""
-                                                                            class="text-body"><strong>Umberto Kass</strong></a></p>
-                                                                        <div class="rating">
-                                                                            <span class="rating__item"><span class="material-icons">star</span></span>
-                                                                            <span class="rating__item"><span class="material-icons">star</span></span>
-                                                                            <span class="rating__item"><span class="material-icons">star</span></span>
-                                                                            <span class="rating__item"><span class="material-icons">star</span></span>
-                                                                            <span class="rating__item"><span class="material-icons">star_border</span></span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </blockquote>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-12 col-md-6">
-                                                        <div class="card card--elevated card-body">
-                                                            <blockquote class="mb-0">
-                                                                <p class="text-70">
-                                                                    We've been using Talebee for couple of weeks now and we love it! Been able to manage our data has helped us and save us time, simplify processes, and ultimately become more productive. We couldn't be happier with the choice we made to use Talebee.
-                                                                </p>
-
-                                                                <div class="media">
-                                                                    <div class="media-left">
-                                                                        <img src="./images/256_jeremy-banks-798787-unsplash.jpg"
-                                                                            width="40"
-                                                                            alt="avatar"
-                                                                            class="rounded-circle">
-                                                                    </div>
-                                                                    <div class="media-body media-middle">
-                                                                        <p class="mb-0"><a href=""
-                                                                            class="text-body"><strong>Umberto Kass</strong></a></p>
-                                                                        <div class="rating">
-                                                                            <span class="rating__item"><span class="material-icons">star</span></span>
-                                                                            <span class="rating__item"><span class="material-icons">star</span></span>
-                                                                            <span class="rating__item"><span class="material-icons">star</span></span>
-                                                                            <span class="rating__item"><span class="material-icons">star</span></span>
-                                                                            <span class="rating__item"><span class="material-icons">star_border</span></span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </blockquote>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-12 col-md-6">
-                                                        <div class="card card--elevated card-body">
-                                                            <blockquote class="mb-0">
-                                                                <p class="text-70">
-                                                                    Not only has it helped us to increase profits, it has enabled us to automate many of our business processes. Its easy to use and works flawlessly in migrating our contact lists.
-                                                                </p>
-
-                                                                <div class="media">
-                                                                    <div class="media-left">
-                                                                        <img src="./images/256_michael-dam-258165-unsplash.jpg"
-                                                                            width="40"
-                                                                            alt="avatar"
-                                                                            class="rounded-circle">
-                                                                    </div>
-                                                                    <div class="media-body media-middle">
-                                                                        <p class="mb-0"><a href=""
-                                                                            class="text-body"><strong>Umberto Kass</strong></a></p>
-                                                                        <div class="rating">
-                                                                            <span class="rating__item"><span class="material-icons">star</span></span>
-                                                                            <span class="rating__item"><span class="material-icons">star</span></span>
-                                                                            <span class="rating__item"><span class="material-icons">star</span></span>
-                                                                            <span class="rating__item"><span class="material-icons">star</span></span>
-                                                                            <span class="rating__item"><span class="material-icons">star_border</span></span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </blockquote>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="col-md-12 mx-auto mb-5 reveal">
-                                <div class=" text-center">
-                                    <div class="mr-2 d-inline"><a href="/login" class="btn btn-primary"> Get Started for free </a></div>
-                                    <div class="d-inline"><a href="/pricing" class="btn btn-info"> Pricing </a></div>
-                                </div>
-                            </div>
-
+    <div class="mdk-header-layout__content page-content">
+        <div class=" pt-32pt pt-sm-64pt pb-32pt">
+            <div class="container page__container page-section">
+                <div class="">
+                    <!-- <div class="">
+                        <h1 class="te">Fast, <span class="text-red-400">Powerful</span> and Reliable </h1>
+                        <div class="text-center h6 mt-n3 ">Get yourself and your <br> business organised in one place.</div>
+                    </div> -->
+                    <!-- <div class="">
+                        <div id="feedback" class="mt-2"></div>
+                    </div> -->
+    
+    
+                    <div class="">
+                        <div class="">
+                            <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button> -->
+                            <h2>
+                                Audience
+                            </h2>
+    
+                            <p>
+                                Build your audience with confidence. <br>
+                                Manage all your list in one place. Edit existing and add new contact.
+                            </p>
                         </div>
+                        <img src="./img/list1.png" alt="" style="width: 100%">
                     </div>
 
+                    <div class="">
+                        <div class="">
+                            <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button> -->
+                            <h2>
+                                Import List
+                            </h2>
+    
+                            <p>
+                                Import excel record of your audience contact list. Excel files(.xlsx,.xls,.csv,.ods)
+                            </p>
+                        </div>
+                        <img src="./img/import1.png" alt="" style="width: 100%">
+                    </div>
+    
+                    <div class="">
+                        <div class="">
+                            <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button> -->
+                            <h2>
+                                Monitor
+                            </h2>
+    
+                            <p>
+                                Monitor your subscriptions in realtime,track impressions and setup your newsletter page.
+                            </p>
+                        </div>
+                        <img src="./img/newsletter1.png" alt="" style="width: 100%">
+                    </div>
+    
+                    <div class="">
+                        <div class="">
+                            <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button> -->
+                            <h2>
+                                Story
+                            </h2>
+    
+                            <p>
+                                Curate your story nicely. Search for relevant images for your story. Engage your audience
+                                and customers with interesting stories.
+                            </p>
+                        </div>
+                        <img src="./img/story1.png" alt="" style="width: 100%">
+                    </div>
+    
+                    <div class="">
+                        <div class="">
+                            <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button> -->
+                            <h2>
+                                Timeline
+                            </h2>
+    
+                            <p>
+                                Your stories are organized not to loose track of draft and schedules.
+                            </p>
+                        </div>
+                        <img src="./img/timeline1.png" alt="" style="width: 100%">
+                    </div>
+    
+                    <div class="col-md-12 mt-5">
+                        <h2>A platform you can depend on.</h2>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 card-group-row__col">
+                        <div class="card card-group-row__card text-center o-hidden card--raised"
+                            style="border-radius: 20px">
+    
+                            <div class="card-footer">
+                                <a href="#" id="subscribe-to-monthly" class="btn subscribe-to-monthly "> For Creators</a>
+                            </div>
+                        </div>
+                    </div>
+    
+    
+                    <div class="col-lg-3 col-sm-6 card-group-row__col">
+                        <div class="card card-group-row__card text-center o-hidden card--raised"
+                            style="border-radius: 20px">
+    
+                            <div class="card-footer">
+                                <a href="#" id="subscribe-to-monthly" class="btn subscribe-to-monthly "> For Publishers </a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-lg-3 col-sm-6 card-group-row__col">
+                        <div class="card card-group-row__card text-center o-hidden card--raised">
+    
+                            <div class="card-footer">
+                                <a href="#" id="subscribe-to-monthly" class="btn subscribe-to-monthly ">For Business</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-lg-3 col-sm-6 card-group-row__col">
+                        <div class="card card-group-row__card text-center o-hidden card--raised">
+    
+                            <div class="card-footer">
+                                <a href="#" id="subscribe-to-monthly" class="btn subscribe-to-monthly ">For You</a>
+                            </div>
+                        </div>
+                    </div>
+    
+    
+                    <div class="col-md-12 mx-auto mb-5">
+                        <div class="page-section border-bottom-1">
+                            <div class="container-fluid page__container">
+                                <div class="page-headline text-center">
+                                    <h2>Feedback</h2>
+                                    <p class="lead measure-lead mx-auto text-70">What other solopreneurs, business owners
+                                        and individuals have to say about us after using our platform in reaching their
+                                        goals.</p>
+                                </div>
+    
+                                <div class="position-relative carousel-card">
+                                    <div class="row d-block js-mdk-carousel" id="carousel-feedback">
+                                        <a class="carousel-control-next js-mdk-carousel-control mt-n24pt"
+                                            href="#carousel-feedback" role="button" data-slide="next">
+                                            <span class="carousel-control-icon material-icons"
+                                                aria-hidden="true">keyboard_arrow_right</span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                        <div class="mdk-carousel__content">
+    
+                                            <div class="col-12 col-md-6">
+                                                <div class="card card--elevated card-body">
+                                                    <blockquote class="mb-0">
+                                                        <p class="text-70">
+                                                            I was a little nervous about Talebee products in general but I
+                                                            was so impressed with how easy it was to get started with. I had
+                                                            no idea what I was doing, and it took me less than 15 minutes to
+                                                            set up my account and get started. After that, it's been a smoth
+                                                            sailing ever since
+                                                        </p>
+    
+                                                        <div class="media">
+                                                            <div class="media-left">
+                                                                <img src="./images/256_michael-dam-258165-unsplash.jpg"
+                                                                    width="40" alt="avatar" class="rounded-circle">
+                                                            </div>
+                                                            <div class="media-body media-middle">
+                                                                <p class="mb-0"><a href="" class="text-body"><strong>Umberto
+                                                                            Kass</strong></a></p>
+                                                                <div class="rating">
+                                                                    <span class="rating__item"><span
+                                                                    class="material-icons">star</span></span>
+                                                                    <span class="rating__item"><span
+                                                                            class="material-icons">star</span></span>
+                                                                    <span class="rating__item"><span
+                                                                            class="material-icons">star</span></span>
+                                                                    <span class="rating__item"><span
+                                                                            class="material-icons">star</span></span>
+                                                                    <span class="rating__item"><span
+                                                                            class="material-icons">star_border</span></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </blockquote>
+                                                </div>
+                                            </div>
+    
+                                            <div class="col-12 col-md-6">
+                                                <div class="card card--elevated card-body">
+                                                    <blockquote class="mb-0">
+                                                        <p class="text-70">
+                                                            We've been using Talebee for couple of weeks now and we love it!
+                                                            Been able to manage our data has helped us and save us time,
+                                                            simplify processes, and ultimately become more productive. We
+                                                            couldn't be happier with the choice we made to use Talebee.
+                                                        </p>
+    
+                                                        <div class="media">
+                                                            <div class="media-left">
+                                                                <img src="./images/256_jeremy-banks-798787-unsplash.jpg"
+                                                                    width="40" alt="avatar" class="rounded-circle">
+                                                            </div>
+                                                            <div class="media-body media-middle">
+                                                                <p class="mb-0"><a href="" class="text-body"><strong>Umberto
+                                                                            Kass</strong></a></p>
+                                                                <div class="rating">
+                                                                    <span class="rating__item"><span
+                                                                            class="material-icons">star</span></span>
+                                                                    <span class="rating__item"><span
+                                                                            class="material-icons">star</span></span>
+                                                                    <span class="rating__item"><span
+                                                                            class="material-icons">star</span></span>
+                                                                    <span class="rating__item"><span
+                                                                            class="material-icons">star</span></span>
+                                                                    <span class="rating__item"><span
+                                                                            class="material-icons">star_border</span></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </blockquote>
+                                                </div>
+                                            </div>
+    
+                                            <div class="col-12 col-md-6">
+                                                <div class="card card--elevated card-body">
+                                                    <blockquote class="mb-0">
+                                                        <p class="text-70">
+                                                            Not only has it helped us to increase profits, it has enabled us
+                                                            to automate many of our business processes. Its easy to use and
+                                                            works flawlessly in migrating our contact lists.
+                                                        </p>
+    
+                                                        <div class="media">
+                                                            <div class="media-left">
+                                                                <img src="./images/256_michael-dam-258165-unsplash.jpg"
+                                                                    width="40" alt="avatar" class="rounded-circle">
+                                                            </div>
+                                                            <div class="media-body media-middle">
+                                                                <p class="mb-0"><a href="" class="text-body"><strong>Umberto
+                                                                            Kass</strong></a></p>
+                                                                <div class="rating">
+                                                                    <span class="rating__item"><span
+                                                                            class="material-icons">star</span></span>
+                                                                    <span class="rating__item"><span
+                                                                            class="material-icons">star</span></span>
+                                                                    <span class="rating__item"><span
+                                                                            class="material-icons">star</span></span>
+                                                                    <span class="rating__item"><span
+                                                                            class="material-icons">star</span></span>
+                                                                    <span class="rating__item"><span
+                                                                            class="material-icons">star_border</span></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </blockquote>
+                                                </div>
+                                            </div>
+    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                    <div class="col-md-12 mx-auto mb-5 reveal">
+                        <div class=" text-center">
+                            <div class="mr-2 d-inline"><a href="/login" class="btn btn-primary"> Get Started for free </a>
+                            </div>
+                            <div class="d-inline"><a href="/pricing" class="btn btn-info"> Pricing </a></div>
+                        </div>
+                    </div>
+    
                 </div>
-
-            </div> -->
+            </div>
+    
+        </div>
+    
+    </div>
 
     <!-- <div class="container mb-5 d-flex justify-content-between">
         <div>
@@ -502,3 +516,5 @@
 </body>
 
 </html>
+ Talebee Talebee
+Get Started-Free
